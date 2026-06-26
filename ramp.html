@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAMP</title>
+    <link rel="stylesheet" href="ramp.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <img src="images/logo.png" alt="Logo RAMP" class="logo" />
+          <span class="sous-titre">RAMP</span>
+        </div>
+
+        <nav class="header-nav" id="header-nav">
+          <button
+            class="onglet actif"
+            data-page="accueil"
+            onclick="changerOnglet('accueil')"
+          >
+            Accueil
+          </button>
+
+          <div class="menu-outils">
+            <button
+              class="onglet parent"
+              id="btn-outils"
+              onclick="toggleSousMenu(event)"
+              aria-expanded="false"
+            >
+              Outils
+              <img src="images/arrow-down.png" alt="" class="chevron" />
+            </button>
+            <div class="sous-menu" id="sous-menu-outils">
+              <button
+                class="onglet sous"
+                data-page="numero"
+                onclick="changerOnglet('numero')"
+              >
+                Numéro
+              </button>
+              <button
+                class="onglet sous"
+                data-page="plaque"
+                onclick="changerOnglet('plaque')"
+              >
+                Plaque
+              </button>
+              <button
+                class="onglet sous"
+                data-page="couleur"
+                onclick="changerOnglet('couleur')"
+              >
+                Couleur
+              </button>
+            </div>
+          </div>
+
+          <button
+            class="onglet"
+            data-page="apropos"
+            onclick="changerOnglet('apropos')"
+          >
+            A propos
+          </button>
+          <button
+            class="onglet"
+            data-page="infos"
+            onclick="changerOnglet('infos')"
+          >
+            Infos
+          </button>
+        </nav>
+
+        <div class="header-right">
+          <span class="version">v1.0</span>
+          <button
+            class="btn-theme"
+            onclick="basculerTheme()"
+            id="btn-theme"
+            title="Changer de thème"
+          >
+            <img src="images/mode-sombre.png" alt="Thème" id="icon-theme" />
+          </button>
+        </div>
+      </header>
+      <main class="main" id="main-content">
+        <div class="chargement">...</div>
+      </main>
+    </div>
+
+    <script src="ramp.js"></script>
+  </body>
+</html>
