@@ -63,11 +63,13 @@ RAMP est une boîte à outils développée pour répondre aux besoins spécifiqu
 
 ## Structure du projet
 Outils-Ramp/
+
 ├── captures/ # Captures d'écran
 
 ├── images/ # Images du header et pages statiques
 
 ├── outils/ # Modules outils (HTML, JavaScript, images)
+
   └── images/ # Images spécifiques aux outils
 
 ├── pages/ # Pages statiques
