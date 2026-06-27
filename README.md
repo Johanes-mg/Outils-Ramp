@@ -33,17 +33,23 @@ RAMP est une boîte à outils développée pour répondre aux besoins spécifiqu
 
 ## Captures d'écran
 
-### Page d'accueil
+### Page d'accueil-clair
 ![Accueil](captures/2026-06-27-03.11.01.png)
 
-### Générateur de numéro
+### Page d'accueil-sombre
 ![Numero](captures/2026-06-27-03.11.21.png)
 
-### Générateur de plaque
+### Générateur de numéro
 ![Plaque](captures/2026-06-27-03.12.08.png)
 
-### Sélecteur de couleur
+### Sélecteur de numéro-val
 ![Couleur](captures/2026-06-27-03.12.42.png)
+
+### Sélecteur de plaques d'immatriculations
+![Couleur](captures/2026-06-27-03.12.58.png)
+
+### Sélecteur de couleur
+![Couleur](captures/2026-06-27-03.13.59.png)
 
 ---
 
