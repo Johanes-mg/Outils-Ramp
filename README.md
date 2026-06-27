@@ -42,12 +42,19 @@ L'application propose des fonctionnalités simples, rapides et accessibles, sans
 
 
 Outils-Ramp/
+
 ├── images/          # Images du header et pages statiques
+
 ├── outils/          # Modules outils (HTML, JavaScript, images)
+
 │   └── images/      # Images spécifiques aux outils
+
 ├── pages/           # Pages statiques
+
 ├── ramp.css         # Styles principaux
+
 ├── ramp.html        # Page principale
+
 └── ramp.js          # Logique principale
 
 ## Auteur
