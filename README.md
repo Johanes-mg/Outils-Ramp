@@ -31,6 +31,22 @@ RAMP est une boîte à outils développée pour répondre aux besoins spécifiqu
 
 ---
 
+## Captures d'écran
+
+### Page d'accueil
+![Accueil](captures/2026-06-27-03.11.01.png)
+
+### Générateur de numéro
+![Numero](captures/2026-06-27-03.11.21.png)
+
+### Générateur de plaque
+![Plaque](captures/2026-06-27-03.12.08.png)
+
+### Sélecteur de couleur
+![Couleur](captures/2026-06-27-03.12.42.png)
+
+---
+
 ## Technologies utilisées
 
 - HTML5
@@ -40,3 +56,27 @@ RAMP est une boîte à outils développée pour répondre aux besoins spécifiqu
 ---
 
 ## Structure du projet
+Outils-Ramp/
+├── captures/ # Captures d'écran
+
+├── images/ # Images du header et pages statiques
+
+├── outils/ # Modules outils (HTML, JavaScript, images)
+  └── images/ # Images spécifiques aux outils
+
+├── pages/ # Pages statiques
+
+├── ramp.css # Styles principaux
+
+├── ramp.html # Page principale
+
+└── ramp.js # Logique principale
+
+## Auteurs :
+Johanès F.
+
+Made in Madagascar 🇲🇬
+
+
+
+---
