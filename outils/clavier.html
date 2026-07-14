@@ -1,0 +1,251 @@
+<div class="page" id="page-clavier">
+  <div class="outil-header">
+    <img src="outils/images/clavier.png" class="outil-icon" />
+    <h2>Tables de Caractères</h2>
+  </div>
+  <p>
+    Cliquez sur un caractère pour l'ajouter au texte. Copiez le texte final avec
+    le bouton ci-dessous.
+  </p>
+
+  <!-- Zone de texte -->
+  <div class="clavier-zone-texte">
+    <textarea
+      id="clavier-texte"
+      placeholder="Écrivez ici en cliquant sur les caractères..."
+    ></textarea>
+    <div class="clavier-boutons-actions">
+      <button class="btn-action" id="btn-effacer">Effacer tout</button>
+      <button class="btn-copier-texte" id="btn-copier-texte">
+        <img src="outils/images/copier.png" /> Copier
+      </button>
+    </div>
+  </div>
+
+  <!-- Tables de caractères -->
+  <div class="tables-container" id="tables-container">
+    <!-- Table : Minuscules -->
+    <div class="table-caracteres">
+      <div class="table-titre">Minuscules</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere="a">a</span>
+        <span class="caractere" data-caractere="b">b</span>
+        <span class="caractere" data-caractere="c">c</span>
+        <span class="caractere" data-caractere="d">d</span>
+        <span class="caractere" data-caractere="e">e</span>
+        <span class="caractere" data-caractere="f">f</span>
+        <span class="caractere" data-caractere="g">g</span>
+        <span class="caractere" data-caractere="h">h</span>
+        <span class="caractere" data-caractere="i">i</span>
+        <span class="caractere" data-caractere="j">j</span>
+        <span class="caractere" data-caractere="k">k</span>
+        <span class="caractere" data-caractere="l">l</span>
+        <span class="caractere" data-caractere="m">m</span>
+        <span class="caractere" data-caractere="n">n</span>
+        <span class="caractere" data-caractere="o">o</span>
+        <span class="caractere" data-caractere="p">p</span>
+        <span class="caractere" data-caractere="q">q</span>
+        <span class="caractere" data-caractere="r">r</span>
+        <span class="caractere" data-caractere="s">s</span>
+        <span class="caractere" data-caractere="t">t</span>
+        <span class="caractere" data-caractere="u">u</span>
+        <span class="caractere" data-caractere="v">v</span>
+        <span class="caractere" data-caractere="w">w</span>
+        <span class="caractere" data-caractere="x">x</span>
+        <span class="caractere" data-caractere="y">y</span>
+        <span class="caractere" data-caractere="z">z</span>
+      </div>
+    </div>
+
+    <!-- Table : Majuscules -->
+    <div class="table-caracteres">
+      <div class="table-titre">Majuscules</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere="A">A</span>
+        <span class="caractere" data-caractere="B">B</span>
+        <span class="caractere" data-caractere="C">C</span>
+        <span class="caractere" data-caractere="D">D</span>
+        <span class="caractere" data-caractere="E">E</span>
+        <span class="caractere" data-caractere="F">F</span>
+        <span class="caractere" data-caractere="G">G</span>
+        <span class="caractere" data-caractere="H">H</span>
+        <span class="caractere" data-caractere="I">I</span>
+        <span class="caractere" data-caractere="J">J</span>
+        <span class="caractere" data-caractere="K">K</span>
+        <span class="caractere" data-caractere="L">L</span>
+        <span class="caractere" data-caractere="M">M</span>
+        <span class="caractere" data-caractere="N">N</span>
+        <span class="caractere" data-caractere="O">O</span>
+        <span class="caractere" data-caractere="P">P</span>
+        <span class="caractere" data-caractere="Q">Q</span>
+        <span class="caractere" data-caractere="R">R</span>
+        <span class="caractere" data-caractere="S">S</span>
+        <span class="caractere" data-caractere="T">T</span>
+        <span class="caractere" data-caractere="U">U</span>
+        <span class="caractere" data-caractere="V">V</span>
+        <span class="caractere" data-caractere="W">W</span>
+        <span class="caractere" data-caractere="X">X</span>
+        <span class="caractere" data-caractere="Y">Y</span>
+        <span class="caractere" data-caractere="Z">Z</span>
+      </div>
+    </div>
+
+    <!-- Table : Accents (aigus, graves, circonflexes, trémas, cédilles) -->
+    <div class="table-caracteres">
+      <div class="table-titre">Accents & cédilles</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere="é">é</span>
+        <span class="caractere" data-caractere="É">É</span>
+        <span class="caractere" data-caractere="è">è</span>
+        <span class="caractere" data-caractere="È">È</span>
+        <span class="caractere" data-caractere="ê">ê</span>
+        <span class="caractere" data-caractere="Ê">Ê</span>
+        <span class="caractere" data-caractere="ë">ë</span>
+        <span class="caractere" data-caractere="Ë">Ë</span>
+        <span class="caractere" data-caractere="à">à</span>
+        <span class="caractere" data-caractere="À">À</span>
+        <span class="caractere" data-caractere="â">â</span>
+        <span class="caractere" data-caractere="Â">Â</span>
+        <span class="caractere" data-caractere="ä">ä</span>
+        <span class="caractere" data-caractere="Ä">Ä</span>
+        <span class="caractere" data-caractere="ç">ç</span>
+        <span class="caractere" data-caractere="Ç">Ç</span>
+        <span class="caractere" data-caractere="î">î</span>
+        <span class="caractere" data-caractere="Î">Î</span>
+        <span class="caractere" data-caractere="ï">ï</span>
+        <span class="caractere" data-caractere="Ï">Ï</span>
+        <span class="caractere" data-caractere="ô">ô</span>
+        <span class="caractere" data-caractere="Ô">Ô</span>
+        <span class="caractere" data-caractere="ö">ö</span>
+        <span class="caractere" data-caractere="Ö">Ö</span>
+        <span class="caractere" data-caractere="ù">ù</span>
+        <span class="caractere" data-caractere="Ù">Ù</span>
+        <span class="caractere" data-caractere="û">û</span>
+        <span class="caractere" data-caractere="Û">Û</span>
+        <span class="caractere" data-caractere="ü">ü</span>
+        <span class="caractere" data-caractere="Ü">Ü</span>
+        <span class="caractere" data-caractere="ÿ">ÿ</span>
+        <span class="caractere" data-caractere="Ÿ">Ÿ</span>
+        <span class="caractere" data-caractere="á">á</span>
+        <span class="caractere" data-caractere="Á">Á</span>
+        <span class="caractere" data-caractere="í">í</span>
+        <span class="caractere" data-caractere="Í">Í</span>
+        <span class="caractere" data-caractere="ó">ó</span>
+        <span class="caractere" data-caractere="Ó">Ó</span>
+        <span class="caractere" data-caractere="ú">ú</span>
+        <span class="caractere" data-caractere="Ú">Ú</span>
+        <span class="caractere" data-caractere="ý">ý</span>
+        <span class="caractere" data-caractere="Ý">Ý</span>
+        <span class="caractere" data-caractere="œ">œ</span>
+        <span class="caractere" data-caractere="Œ">Œ</span>
+        <span class="caractere" data-caractere="æ">æ</span>
+        <span class="caractere" data-caractere="Æ">Æ</span>
+        <span class="caractere" data-caractere="ß">ß</span>
+      </div>
+    </div>
+
+    <!-- Table : Symboles -->
+    <div class="table-caracteres">
+      <div class="table-titre">Symboles</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere="€">€</span>
+        <span class="caractere" data-caractere="£">£</span>
+        <span class="caractere" data-caractere="$">$</span>
+        <span class="caractere" data-caractere="¥">¥</span>
+        <span class="caractere" data-caractere="¢">¢</span>
+        <span class="caractere" data-caractere="¤">¤</span>
+        <span class="caractere" data-caractere="©">©</span>
+        <span class="caractere" data-caractere="®">®</span>
+        <span class="caractere" data-caractere="™">™</span>
+        <span class="caractere" data-caractere="°">°</span>
+        <span class="caractere" data-caractere="±">±</span>
+        <span class="caractere" data-caractere="µ">µ</span>
+        <span class="caractere" data-caractere="·">·</span>
+        <span class="caractere" data-caractere="…">…</span>
+        <span class="caractere" data-caractere="•">•</span>
+        <span class="caractere" data-caractere="◊">◊</span>
+        <span class="caractere" data-caractere="♠">♠</span>
+        <span class="caractere" data-caractere="♣">♣</span>
+        <span class="caractere" data-caractere="♥">♥</span>
+        <span class="caractere" data-caractere="♦">♦</span>
+        <span class="caractere" data-caractere="✓">✓</span>
+        <span class="caractere" data-caractere="✗">✗</span>
+        <span class="caractere" data-caractere="★">★</span>
+        <span class="caractere" data-caractere="☆">☆</span>
+      </div>
+    </div>
+
+    <!-- Table : Chiffres et opérateurs -->
+    <div class="table-caracteres">
+      <div class="table-titre">Chiffres & opérateurs</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere="0">0</span>
+        <span class="caractere" data-caractere="1">1</span>
+        <span class="caractere" data-caractere="2">2</span>
+        <span class="caractere" data-caractere="3">3</span>
+        <span class="caractere" data-caractere="4">4</span>
+        <span class="caractere" data-caractere="5">5</span>
+        <span class="caractere" data-caractere="6">6</span>
+        <span class="caractere" data-caractere="7">7</span>
+        <span class="caractere" data-caractere="8">8</span>
+        <span class="caractere" data-caractere="9">9</span>
+        <span class="caractere" data-caractere="+">+</span>
+        <span class="caractere" data-caractere="-">-</span>
+        <span class="caractere" data-caractere="*">*</span>
+        <span class="caractere" data-caractere="/">/</span>
+        <span class="caractere" data-caractere="=">=</span>
+        <span class="caractere" data-caractere="%">%</span>
+        <span class="caractere" data-caractere="&">&</span>
+        <span class="caractere" data-caractere="|">|</span>
+        <span class="caractere" data-caractere="~">~</span>
+        <span class="caractere" data-caractere="#">#</span>
+        <span class="caractere" data-caractere="^">^</span>
+        <span class="caractere" data-caractere="_">_</span>
+      </div>
+    </div>
+
+    <!-- Table : Ponctuation -->
+    <div class="table-caracteres">
+      <div class="table-titre">Ponctuation</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere=".">.</span>
+        <span class="caractere" data-caractere=",">,</span>
+        <span class="caractere" data-caractere=";">;</span>
+        <span class="caractere" data-caractere=":">:</span>
+        <span class="caractere" data-caractere="!">!</span>
+        <span class="caractere" data-caractere="?">?</span>
+        <span class="caractere" data-caractere="'">'</span>
+        <span class="caractere" data-caractere='"'>"</span>
+        <span class="caractere" data-caractere="(">(</span>
+        <span class="caractere" data-caractere=")">)</span>
+        <span class="caractere" data-caractere="[">[</span>
+        <span class="caractere" data-caractere="]">]</span>
+        <span class="caractere" data-caractere="{">{</span>
+        <span class="caractere" data-caractere="}">}</span>
+        <span class="caractere" data-caractere="<"><</span>
+        <span class="caractere" data-caractere=">">></span>
+        <span class="caractere" data-caractere="«">«</span>
+        <span class="caractere" data-caractere="»">»</span>
+        <span class="caractere" data-caractere="…">…</span>
+        <span class="caractere" data-caractere="—">—</span>
+      </div>
+    </div>
+
+    <!-- Table : Guillemets -->
+    <div class="table-caracteres">
+      <div class="table-titre">Guillemets</div>
+      <div class="table-grille">
+        <span class="caractere" data-caractere="“">“</span>
+        <span class="caractere" data-caractere="”">”</span>
+        <span class="caractere" data-caractere="‘">‘</span>
+        <span class="caractere" data-caractere="’">’</span>
+        <span class="caractere" data-caractere="«">«</span>
+        <span class="caractere" data-caractere="»">»</span>
+        <span class="caractere" data-caractere="‹">‹</span>
+        <span class="caractere" data-caractere="›">›</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-copie" class="toast-copie">Texte copié !</div>
+</div>

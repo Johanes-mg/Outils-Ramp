@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. VARIABLES & THEMES (Sombre par defaut / Clair)
-   ========================================================================== */
+/* ========== VARIABLES & THEMES ========== */
 :root {
   --bg: #0d0d14;
   --bg-header: #14141c;
@@ -98,20 +96,15 @@
   --sous-menu-text: #000000;
 }
 
-/* ==========================================================================
-   2. REINITIALISATION & BASE
-   ========================================================================== */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Remplacement de la règle agressive '*' par un ciblage sain des zones de texte */
 textarea {
   resize: none;
 }
-
 html,
 body {
   height: 100%;
@@ -128,7 +121,6 @@ body {
     color 0.3s;
   overflow: hidden;
 }
-
 .app {
   display: flex;
   flex-direction: column;
@@ -137,9 +129,7 @@ body {
   position: relative;
 }
 
-/* ==========================================================================
-   3. STRUCTURE HEADER
-   ========================================================================== */
+/* ========== HEADER ========== */
 .header {
   height: var(--header-height);
   background: var(--bg-header);
@@ -154,26 +144,22 @@ body {
     background 0.3s,
     border-color 0.3s;
 }
-
 .header-left {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
 }
-
 .header-left .logo {
   height: 32px;
   width: auto;
 }
-
 .header-left .sous-titre {
   font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 .header-nav {
   display: flex;
   align-items: center;
@@ -182,22 +168,18 @@ body {
   height: 100%;
   flex: 1;
 }
-
 .header-right {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
 }
-
 .header-right .version {
   font-size: 11px;
   color: var(--version-text);
 }
 
-/* ==========================================================================
-   4. ONGLETS & NAVIGATION
-   ========================================================================== */
+/* ========== ONGLETS ========== */
 .onglet {
   display: flex;
   align-items: center;
@@ -214,38 +196,32 @@ body {
   transition: all 0.2s ease;
   white-space: nowrap;
 }
-
 .onglet img {
   height: 16px;
   width: auto;
   opacity: 0.6;
   transition: opacity 0.2s;
 }
-
 .onglet:hover {
   background: var(--onglet-hover-bg);
   color: var(--onglet-hover-text);
 }
-
 .onglet:hover img {
   opacity: 1;
 }
-
 .onglet.actif {
   background: var(--onglet-actif-bg);
   color: var(--onglet-actif-text);
 }
-
 .onglet.actif img {
   opacity: 1;
   filter: brightness(0) invert(1);
 }
 
-/* ========== Sous-menus ========== */
+/* ========== SOUS-MENU ========== */
 .menu-outils {
   position: relative;
 }
-
 .onglet.parent .chevron {
   height: 14px;
   width: auto;
@@ -253,11 +229,9 @@ body {
   opacity: 0.6;
   margin-left: 4px;
 }
-
 .onglet.parent.ouvert .chevron {
   transform: rotate(180deg);
 }
-
 .sous-menu {
   display: none;
   flex-direction: column;
@@ -274,11 +248,9 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   z-index: 200;
 }
-
 .sous-menu.ouvert {
   display: flex;
 }
-
 .onglet.sous {
   padding: 8px 12px;
   font-size: 12.5px;
@@ -288,20 +260,16 @@ body {
   width: 100%;
   justify-content: flex-start;
 }
-
 .onglet.sous:hover {
   background: var(--bg-hover-sous);
 }
-
 .onglet.sous.actif {
   background: var(--onglet-actif-bg);
   color: var(--onglet-actif-text);
   border-left-color: var(--onglet-sous-border);
 }
 
-/* ==========================================================================
-   5. BOUTON THEME
-   ========================================================================== */
+/* ========== BOUTON THEME ========== */
 .btn-theme {
   background: transparent;
   border: 1px solid var(--btn-theme-border);
@@ -313,43 +281,35 @@ body {
   justify-content: center;
   transition: all 0.2s;
 }
-
 .btn-theme:hover {
   background: var(--btn-theme-hover-bg);
   border-color: var(--accent);
 }
-
 .btn-theme img {
   height: 16px;
   width: auto;
   opacity: 0.7;
 }
-
 .btn-theme:hover img {
   opacity: 1;
 }
 
-/* ==========================================================================
-   6. ZONE DE CONTENU PRINCIPAL
-   ========================================================================== */
+/* ========== MAIN CONTENT ========== */
 .main {
   flex: 1;
   overflow-y: auto;
   background: var(--bg);
   transition: background 0.3s;
 }
-
 .page {
   display: none;
   padding: 30px 20px;
   width: 100%;
   animation: fadeIn 0.2s ease-in-out;
 }
-
 .page.actif {
   display: block;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -360,7 +320,6 @@ body {
     transform: translateY(0);
   }
 }
-
 .chargement {
   text-align: center;
   color: var(--text-secondary);
@@ -368,7 +327,7 @@ body {
   font-size: 14px;
 }
 
-/* ========== Page Accueil ========== */
+/* ========== PAGE ACCUEIL ========== */
 #page-accueil {
   display: none;
   align-items: center;
@@ -376,31 +335,26 @@ body {
   min-height: calc(100vh - var(--header-height));
   animation: none !important;
 }
-
 #page-accueil.actif {
   display: flex;
 }
-
 .accueil-contenu {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .accueil-logo {
   width: 100px;
   height: auto;
   margin-bottom: 16px;
 }
-
 #page-accueil h1 {
   font-size: 40px;
   font-weight: 800;
   color: var(--text);
   letter-spacing: 4px;
 }
-
 #page-accueil .accueil-sous-titre {
   font-size: 20px;
   color: var(--text-secondary);
@@ -408,14 +362,13 @@ body {
   margin-top: 4px;
 }
 
-/* ========== Typographie ========== */
+/* ========== TYPOGRAPHIE ========== */
 .page h2 {
   font-size: 22px;
   color: var(--text);
   margin-bottom: 12px;
   text-align: center;
 }
-
 .page p {
   margin-bottom: 20px;
   color: var(--text-secondary);
@@ -423,20 +376,16 @@ body {
   line-height: 1.6;
   font-size: 14px;
 }
-
 #page-apropos p {
   text-align: left;
   max-width: 600px;
   margin: 0 auto 16px auto;
 }
-
 #page-apropos strong {
   color: var(--accent);
 }
 
-/* ==========================================================================
-   7. GRILLE D'OUTILS
-   ========================================================================== */
+/* ========== GRILLE OUTILS ========== */
 .grille-outils {
   display: flex;
   flex-direction: column;
@@ -444,7 +393,6 @@ body {
   max-width: 500px;
   margin: 0 auto;
 }
-
 .carte-outil {
   background: var(--bg-surface-card);
   padding: 14px 16px;
@@ -456,37 +404,30 @@ body {
   gap: 14px;
   border: 1px solid var(--border-card);
 }
-
 .carte-outil:hover {
   background: var(--bg-hover);
   border-color: var(--border);
   transform: translateX(2px);
 }
-
 .carte-outil .icone-carte {
   height: 28px;
   width: auto;
 }
-
 .carte-outil .info-carte {
   display: flex;
   flex-direction: column;
 }
-
 .carte-outil .nom {
   font-weight: 600;
   font-size: 15px;
   color: var(--text);
 }
-
 .carte-outil .desc {
   font-size: 12px;
   color: var(--text-secondary);
 }
 
-/* ==========================================================================
-   8. INTERFACES COMPLETEMENT HORIZONTALES
-   ========================================================================== */
+/* ========== ZONE RESULTAT ========== */
 .zone-resultat {
   display: flex;
   flex-direction: row !important;
@@ -496,7 +437,6 @@ body {
   margin: 0 auto 16px auto;
   align-items: stretch;
 }
-
 .zone-resultat input {
   flex: 1;
   padding: 12px;
@@ -511,11 +451,9 @@ body {
   outline: none;
   transition: border-color 0.2s;
 }
-
 .zone-resultat input:focus {
   border-color: var(--input-focus);
 }
-
 .zone-resultat button,
 .controle-couleur button {
   padding: 0 16px;
@@ -533,19 +471,18 @@ body {
   gap: 6px;
   white-space: nowrap;
 }
-
 .zone-resultat button img,
 .controle-couleur button img {
   height: 14px;
   width: auto;
   filter: brightness(0) invert(1);
 }
-
 .zone-resultat button:hover,
 .controle-couleur button:hover {
   background: var(--btn-copier-hover);
 }
 
+/* ========== BOUTON PRINCIPAL ========== */
 .btn-principal {
   width: 100%;
   max-width: 450px;
@@ -564,20 +501,16 @@ body {
   justify-content: center;
   gap: 8px;
 }
-
 .btn-principal img {
   height: 14px;
   width: auto;
   filter: brightness(0) invert(1);
 }
-
 .btn-principal:hover {
   background: var(--btn-couleur-hover);
 }
 
-/* ==========================================================================
-   9. SELECTEUR DE COULEUR
-   ========================================================================== */
+/* ========== SELECTEUR COULEUR ========== */
 .zone-couleur {
   display: flex;
   flex-direction: row !important;
@@ -588,7 +521,6 @@ body {
   max-width: 450px;
   margin: 0 auto;
 }
-
 .zone-couleur canvas {
   border-radius: 6px;
   cursor: crosshair;
@@ -598,21 +530,18 @@ body {
   height: 140px;
   flex-shrink: 0;
 }
-
 .controle-couleur {
   display: flex;
   flex-direction: column;
   gap: 8px;
   flex: 1;
 }
-
 .controle-couleur-groupe {
   display: flex;
   flex-direction: row;
   gap: 8px;
   width: 100%;
 }
-
 .apercu {
   width: 40px;
   height: 40px;
@@ -621,7 +550,6 @@ body {
   background: var(--preview-bg);
   flex-shrink: 0;
 }
-
 .controle-couleur input {
   flex: 1;
   padding: 10px;
@@ -635,19 +563,15 @@ body {
   outline: none;
   min-width: 0;
 }
-
 .controle-couleur input:focus {
   border-color: var(--input-focus);
 }
-
 .controle-couleur button {
   width: 100%;
   padding: 10px;
 }
 
-/* ==========================================================================
-   10. SCROLLBARS
-   ========================================================================== */
+/* ========== SCROLLBARS ========== */
 .main::-webkit-scrollbar {
   width: 6px;
 }
@@ -662,251 +586,7 @@ body {
   background: var(--scrollbar-hover);
 }
 
-/* ==========================================================================
-   11. RESPONSIVE DESIGN
-   ========================================================================== */
-@media (min-width: 769px) {
-  .header-nav {
-    display: flex !important;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --header-height: 48px;
-  }
-
-  .header {
-    padding: 0 8px;
-    height: var(--header-height);
-    min-height: var(--header-height);
-  }
-
-  .header-left .logo {
-    height: 26px;
-  }
-
-  .header-left .sous-titre {
-    display: none;
-  }
-
-  .header-nav {
-    display: flex !important;
-    gap: 2px;
-    overflow-x: auto;
-    padding: 0 4px;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .header-nav::-webkit-scrollbar {
-    display: none;
-  }
-
-  .header-nav .onglet {
-    font-size: 11px;
-    padding: 4px 8px;
-    gap: 4px;
-    flex-shrink: 0;
-  }
-
-  .header-nav .onglet img {
-    height: 14px;
-  }
-
-  .header-nav .sous-menu {
-    position: fixed;
-    top: var(--header-height);
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 180px;
-    border-radius: 0 0 8px 8px;
-    margin-top: 0;
-    background: var(--bg-header);
-    border: 1px solid var(--border-header);
-    border-top: none;
-  }
-
-  .header-nav .onglet.sous {
-    font-size: 12px;
-    padding: 8px 14px;
-  }
-
-  .header-right .version {
-    display: none;
-  }
-
-  .btn-theme {
-    padding: 4px;
-  }
-
-  .btn-theme img {
-    height: 14px;
-  }
-
-  .main {
-    padding-top: 0;
-  }
-
-  #page-accueil h1 {
-    font-size: 24px;
-    letter-spacing: 2px;
-  }
-
-  #page-accueil .accueil-sous-titre {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  .accueil-logo {
-    width: 70px;
-  }
-
-  .page {
-    padding: 16px 12px;
-  }
-
-  .page h2 {
-    font-size: 17px;
-  }
-
-  .zone-resultat input {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .zone-resultat button {
-    padding: 0 12px;
-    font-size: 12px;
-  }
-
-  .btn-principal {
-    font-size: 13px;
-    padding: 10px;
-  }
-
-  .zone-couleur canvas {
-    width: 120px;
-    height: 120px;
-  }
-
-  .grille-outils {
-    gap: 8px;
-  }
-
-  .carte-outil {
-    padding: 10px 12px;
-    gap: 10px;
-  }
-
-  .carte-outil .icone-carte {
-    height: 24px;
-  }
-
-  .carte-outil .nom {
-    font-size: 13px;
-  }
-
-  .carte-outil .desc {
-    font-size: 11px;
-  }
-}
-
-/* ==========================================================================
-   12. PETITS TELEPHONES
-   ========================================================================== */
-@media (max-width: 480px) {
-  :root {
-    --header-height: 44px;
-  }
-
-  .header {
-    padding: 0 6px;
-    height: var(--header-height);
-    min-height: var(--header-height);
-  }
-
-  .header-left .logo {
-    height: 22px;
-  }
-
-  .header-nav .onglet {
-    font-size: 10px;
-    padding: 3px 6px;
-    gap: 3px;
-  }
-
-  .header-nav .onglet img {
-    height: 12px;
-  }
-
-  .btn-theme {
-    padding: 3px;
-  }
-
-  .btn-theme img {
-    height: 12px;
-  }
-
-  #page-accueil h1 {
-    font-size: 20px;
-  }
-
-  #page-accueil .accueil-sous-titre {
-    font-size: 12px;
-  }
-
-  .accueil-logo {
-    width: 55px;
-  }
-
-  .page {
-    padding: 12px 8px;
-  }
-
-  .page h2 {
-    font-size: 15px;
-  }
-
-  .zone-resultat input {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .zone-couleur canvas {
-    width: 100px;
-    height: 100px;
-  }
-
-  .controle-couleur input {
-    font-size: 12px;
-    padding: 6px;
-  }
-
-  .carte-outil {
-    padding: 8px 10px;
-    gap: 8px;
-  }
-
-  .carte-outil .icone-carte {
-    height: 20px;
-  }
-
-  .carte-outil .nom {
-    font-size: 12px;
-  }
-
-  .carte-outil .desc {
-    font-size: 10px;
-  }
-}
-
-/* ==========================================================================
-   13. TOAST DE CONFIRMATION DE COPIE
-   ========================================================================== */
+/* ========== TOAST ========== */
 .toast-copie {
   position: fixed;
   bottom: 30px;
@@ -925,35 +605,22 @@ body {
   z-index: 999;
   pointer-events: none;
 }
-
 .toast-copie.visible {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
-@media (max-width: 768px) {
-  .toast-copie {
-    bottom: 20px;
-    padding: 8px 16px;
-    font-size: 13px;
-  }
-}
-
-/* ==========================================================================
-   14. PAGE INFOS - STYLES CREATEUR
-   ========================================================================== */
+/* ========== PAGE INFOS ========== */
 .infos-createur {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px 0;
 }
-
 .avatar-container {
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
 }
-
 .avatar {
   width: 100px;
   height: 100px;
@@ -963,7 +630,6 @@ body {
   padding: 4px;
   background: var(--bg-surface-card);
 }
-
 .info-ligne {
   display: flex;
   align-items: center;
@@ -974,78 +640,27 @@ body {
   border-radius: 8px;
   margin-bottom: 8px;
 }
-
 .info-ligne:hover {
   background: var(--bg-hover);
   border-color: var(--accent);
 }
-
 .icone-info {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   opacity: 0.7;
 }
-
 .info-ligne span {
   font-size: 14px;
   color: var(--text);
   word-break: break-all;
 }
-
 .info-ligne strong {
   color: var(--accent);
   font-weight: 600;
 }
 
-/* ==========================================================================
-   15. RESPONSIVE - INFOS
-   ========================================================================== */
-@media (max-width: 768px) {
-  .info-ligne {
-    padding: 8px 12px;
-    gap: 10px;
-  }
-
-  .info-ligne span {
-    font-size: 13px;
-  }
-
-  .icone-info {
-    width: 20px;
-    height: 20px;
-  }
-
-  .avatar {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  .info-ligne {
-    padding: 6px 10px;
-    gap: 8px;
-  }
-
-  .info-ligne span {
-    font-size: 12px;
-  }
-
-  .icone-info {
-    width: 18px;
-    height: 18px;
-  }
-
-  .avatar {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-/* ==========================================================================
-   16. STYLES DES EN-TETES D'OUTILS (icône au-dessus du titre)
-   ========================================================================== */
+/* ========== EN-TETES OUTILS ========== */
 .outil-header {
   display: flex;
   flex-direction: column;
@@ -1053,28 +668,675 @@ body {
   justify-content: center;
   margin-bottom: 12px;
 }
-
 .outil-header .outil-icon {
   height: 50px;
   width: auto;
   margin-bottom: 8px;
   opacity: 0.9;
 }
-
 .outil-header h2 {
   margin-bottom: 0;
 }
 
-/* ==========================================================================
-   17. RESPONSIVE - EN-TETES D'OUTILS
-   ========================================================================== */
+/* ========== VISUALISEUR CLAVIER ========== */
+.clavier-conteneur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0 20px 0;
+}
+.clavier-touche {
+  width: 100%;
+  max-width: 500px;
+  min-height: 60px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  background: var(--bg-surface-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+#touche-nom {
+  font-size: 20px;
+  font-family: "Segoe UI", "Consolas", monospace;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  word-break: break-word;
+  min-height: 30px;
+}
+.clavier-touche.touche-clignote {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(98, 0, 238, 0.2);
+}
+
+/* ========== CLAVIER VIRTUEL ========== */
+.clavier-virtuel {
+  max-width: 900px;
+  margin: 15px auto 0 auto;
+  padding: 12px;
+  background: var(--bg-surface-card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+.clavier-ligne {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  justify-content: center;
+}
+.touche-virtuelle {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 6px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+  font-family: "Segoe UI", "Consolas", monospace;
+}
+.touche-virtuelle:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.touche-virtuelle:active,
+.touche-virtuelle.touche-active {
+  background: var(--accent);
+  color: var(--onglet-actif-text);
+  border-color: var(--accent);
+  transform: scale(0.95);
+  box-shadow: 0 0 15px rgba(98, 0, 238, 0.25);
+}
+.touche-virtuelle.touche-large {
+  min-width: 52px;
+}
+.touche-virtuelle.touche-speciale {
+  min-width: 40px;
+  font-size: 10px;
+  background: var(--bg-hover-sous);
+}
+.touche-virtuelle.touche-espace {
+  min-width: 160px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.touche-virtuelle.touche-fleche {
+  min-width: 48px;
+  font-size: 10px;
+  background: var(--bg-hover-sous);
+}
+.clavier-fleches {
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ========== ZONE TEXTE CLAVIER ========== */
+.clavier-zone-texte {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto 15px auto;
+}
+#clavier-texte {
+  width: 100%;
+  min-height: 120px;
+  max-height: 250px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: "Segoe UI", "Consolas", monospace;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-input);
+  color: var(--text);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  line-height: 1.6;
+}
+#clavier-texte:focus {
+  border-color: var(--input-focus);
+}
+#clavier-texte::placeholder {
+  color: var(--text-muted);
+}
+.btn-copier-texte {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background: var(--btn-copier-bg);
+  color: var(--btn-copier-text);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-copier-texte:hover {
+  background: var(--btn-copier-hover);
+}
+.btn-copier-texte img {
+  height: 16px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* ========== BOUTONS ACTIONS ========== */
+.clavier-boutons-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btn-action {
+  padding: 8px 16px;
+  background: var(--bg-hover-sous);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-action:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+}
+.btn-action.btn-actif {
+  background: var(--accent);
+  color: var(--onglet-actif-text);
+  border-color: var(--accent);
+}
+.btn-action.btn-mode {
+  min-width: 60px;
+  justify-content: center;
+}
+
+/* ========== TABLES CARACTERES ========== */
+.tables-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+.table-caracteres {
+  background: var(--bg-surface-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+.table-titre {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+.table-grille {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.caractere {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 6px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: "Segoe UI", "Consolas", monospace;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.caractere:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.caractere:active,
+.caractere.caractere-active {
+  background: var(--accent);
+  color: var(--onglet-actif-text);
+  border-color: var(--accent);
+  transform: scale(0.92);
+  box-shadow: 0 0 20px rgba(98, 0, 238, 0.25);
+}
+
+/* ========== PREVENTION SCROLL ========== */
+.main {
+  scroll-behavior: auto !important;
+  overflow-y: auto !important;
+  overflow-anchor: none !important;
+}
+* {
+  scroll-behavior: auto !important;
+}
+.caractere {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  touch-action: manipulation;
+}
+#clavier-texte {
+  scroll-margin: 0 !important;
+}
+.tables-container {
+  touch-action: manipulation;
+}
+
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  :root {
+    --header-height: 48px;
+  }
+  .header {
+    padding: 0 8px;
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+  .header-left .logo {
+    height: 26px;
+  }
+  .header-left .sous-titre {
+    display: none;
+  }
+  .header-nav {
+    display: flex !important;
+    gap: 2px;
+    overflow-x: auto;
+    padding: 0 4px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .header-nav .onglet {
+    font-size: 11px;
+    padding: 4px 8px;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .header-nav .onglet img {
+    height: 14px;
+  }
+  .header-nav .sous-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
+    border-radius: 0 0 8px 8px;
+    margin-top: 0;
+    background: var(--bg-header);
+    border: 1px solid var(--border-header);
+    border-top: none;
+  }
+  .header-nav .onglet.sous {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+  .header-right .version {
+    display: none;
+  }
+  .btn-theme {
+    padding: 4px;
+  }
+  .btn-theme img {
+    height: 14px;
+  }
+  .main {
+    padding-top: 0;
+  }
+  #page-accueil h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  #page-accueil .accueil-sous-titre {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .accueil-logo {
+    width: 70px;
+  }
+  .page {
+    padding: 16px 12px;
+  }
+  .page h2 {
+    font-size: 17px;
+  }
+  .zone-resultat input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .zone-resultat button {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+  .btn-principal {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .zone-couleur canvas {
+    width: 120px;
+    height: 120px;
+  }
+  .grille-outils {
+    gap: 8px;
+  }
+  .carte-outil {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .carte-outil .icone-carte {
+    height: 24px;
+  }
+  .carte-outil .nom {
+    font-size: 13px;
+  }
+  .carte-outil .desc {
+    font-size: 11px;
+  }
+  .clavier-touche {
+    min-height: 50px;
+    padding: 10px 16px;
+  }
+  #touche-nom {
+    font-size: 17px;
+  }
+  .clavier-virtuel {
+    padding: 8px;
+    margin: 12px auto 0 auto;
+  }
+  .clavier-ligne {
+    gap: 3px;
+    margin-bottom: 3px;
+  }
+  .touche-virtuelle {
+    min-width: 28px;
+    height: 30px;
+    font-size: 9px;
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+  .touche-virtuelle.touche-large {
+    min-width: 38px;
+  }
+  .touche-virtuelle.touche-speciale {
+    min-width: 32px;
+    font-size: 8px;
+  }
+  .touche-virtuelle.touche-espace {
+    min-width: 100px;
+    font-size: 10px;
+  }
+  .touche-virtuelle.touche-fleche {
+    min-width: 36px;
+    font-size: 8px;
+  }
+  .clavier-fleches {
+    gap: 6px;
+  }
+  #clavier-texte {
+    min-height: 100px;
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+  .btn-copier-texte {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .btn-action {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .btn-action.btn-mode {
+    min-width: 50px;
+  }
+  .table-caracteres {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+  .table-titre {
+    font-size: 13px;
+  }
+  .table-grille {
+    gap: 5px;
+  }
+  .caractere {
+    min-width: 32px;
+    height: 32px;
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  .toast-copie {
+    bottom: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .info-ligne {
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  .info-ligne span {
+    font-size: 13px;
+  }
+  .icone-info {
+    width: 20px;
+    height: 20px;
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
   .outil-header .outil-icon {
     height: 40px;
   }
 }
 
 @media (max-width: 480px) {
+  :root {
+    --header-height: 44px;
+  }
+  .header {
+    padding: 0 6px;
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+  .header-left .logo {
+    height: 22px;
+  }
+  .header-nav .onglet {
+    font-size: 10px;
+    padding: 3px 6px;
+    gap: 3px;
+  }
+  .header-nav .onglet img {
+    height: 12px;
+  }
+  .btn-theme {
+    padding: 3px;
+  }
+  .btn-theme img {
+    height: 12px;
+  }
+  #page-accueil h1 {
+    font-size: 20px;
+  }
+  #page-accueil .accueil-sous-titre {
+    font-size: 12px;
+  }
+  .accueil-logo {
+    width: 55px;
+  }
+  .page {
+    padding: 12px 8px;
+  }
+  .page h2 {
+    font-size: 15px;
+  }
+  .zone-resultat input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .zone-couleur canvas {
+    width: 100px;
+    height: 100px;
+  }
+  .controle-couleur input {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .carte-outil {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .carte-outil .icone-carte {
+    height: 20px;
+  }
+  .carte-outil .nom {
+    font-size: 12px;
+  }
+  .carte-outil .desc {
+    font-size: 10px;
+  }
+  .clavier-touche {
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  #touche-nom {
+    font-size: 15px;
+  }
+  .clavier-virtuel {
+    padding: 6px;
+    margin: 10px auto 0 auto;
+    border-radius: 6px;
+  }
+  .clavier-ligne {
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+  .touche-virtuelle {
+    min-width: 22px;
+    height: 26px;
+    font-size: 8px;
+    padding: 0 3px;
+    border-radius: 3px;
+  }
+  .touche-virtuelle.touche-large {
+    min-width: 30px;
+  }
+  .touche-virtuelle.touche-speciale {
+    min-width: 26px;
+    font-size: 7px;
+  }
+  .touche-virtuelle.touche-espace {
+    min-width: 60px;
+    font-size: 8px;
+  }
+  .touche-virtuelle.touche-fleche {
+    min-width: 30px;
+    font-size: 7px;
+  }
+  .clavier-fleches {
+    gap: 4px;
+  }
+  #clavier-texte {
+    min-height: 80px;
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+  .btn-copier-texte {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+  .btn-copier-texte img {
+    height: 14px;
+  }
+  .btn-action {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .btn-action.btn-mode {
+    min-width: 44px;
+  }
+  .tables-container {
+    padding: 5px 0;
+  }
+  .table-caracteres {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+  .table-titre {
+    font-size: 12px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+  }
+  .table-grille {
+    gap: 4px;
+  }
+  .caractere {
+    min-width: 28px;
+    height: 28px;
+    font-size: 12px;
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+  .info-ligne {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+  .info-ligne span {
+    font-size: 12px;
+  }
+  .icone-info {
+    width: 18px;
+    height: 18px;
+  }
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
   .outil-header .outil-icon {
     height: 34px;
   }
