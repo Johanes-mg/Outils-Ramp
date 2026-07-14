@@ -69,9 +69,9 @@ Outils-Ramp/
 
 ├── images/ # Images du header et pages statiques
 
-├── outils/ # Modules outils (HTML, JavaScript, images)
+├── outils/ # Modules outils
 
-│ └── images/ # Images spécifiques aux outils
+    └── images/ # Images spécifiques aux outils
 
 ├── pages/ # Pages statiques
 
@@ -85,15 +85,13 @@ Outils-Ramp/
 
 ---
 
-Auteur
+## Auteur
 
 Johanès Falitiana
 
     GitHub : github.com/Johanes-mg
 
-    Facebook : facebook.com/johanes.falitiana
-
-Licence
+## Licence
 
 MIT
 
