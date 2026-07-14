@@ -9,8 +9,6 @@ L'application propose des fonctionnalités simples, rapides et accessibles, sans
 
 ## Outils inclus
 
-### Générateur de Numéro de Téléphone
-
 # RAMP - Boîte à outils
 
 Suite d'utilitaires légers conçus pour les développeurs et administrateurs systèmes à Madagascar.
@@ -46,8 +44,6 @@ RAMP est une boîte à outils développée pour répondre aux besoins spécifiqu
 - Affichage en temps réel de la valeur hexadécimale
 - Copie automatique dans le presse-papiers
 - Intégration facile dans les feuilles de style et les maquettes graphiques
-
-## =======
 
 ## Captures d'écran
 
